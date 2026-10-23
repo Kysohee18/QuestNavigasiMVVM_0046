@@ -4,6 +4,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.DividerDefaults.Thickness
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -42,7 +44,15 @@ fun  FormIsian(jenisK:List<String> = listOf("Laki-laki", "Perempuan"),
                 label ={Text(text = "Nama Lengkap")},
                 onValueChange = {},
             )
-            HorizontalDivider(modifier = Modifier)
+            HorizontalDivider(modifier = Modifier
+                .padding(20.dp)
+                .width(250.dp), thickness = Thickness,color = color.blue)
+            Row{
+                jenisK.forEach {
+                    item->
+                    Row(verticalAlignment = Alignment.CenterVertically){)
+                }
+            }
         }
     }
 }
