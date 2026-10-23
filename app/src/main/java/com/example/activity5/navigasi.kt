@@ -20,7 +20,10 @@ fun DataApp(
         NavHost(navController = navController,
             startDestination = Navigasi.FormulirSaya.name){
             FormIsian(
-                //pilihanjk =jenisk.map { id -> context.resources.getString(id) },
+                //pilihanjk =jenisk.map { id -> context.resources.getString(id) }
+                OnSubmitBtnClick = {
+                    navController.navigate(Navigasi.Detail.name)
+                }
             ) { }
         }
 }
