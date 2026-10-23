@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
+import com.example.activity5.view.FormIsian
 
 enum class Navigasi {
     FormulirSaya,
@@ -17,5 +18,9 @@ fun DataApp(
 ){
     Scaffold {isiRuang->
         NavHost(navController = navController,
-            startDestination = Navigasi.FormulirSaya.name
+            startDestination = Navigasi.FormulirSaya.name){
+            FormIsian(
+                //pilihanjk =jenisk.map { id -> context.resources.getString(id) },
+            ) { }
+        }
 }
