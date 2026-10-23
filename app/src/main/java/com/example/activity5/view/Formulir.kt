@@ -83,7 +83,10 @@ fun  FormIsian(jenisK:List<String> = listOf("Laki-laki", "Perempuan"),
             Spacer (modifier = Modifier.height(10.dp))
             Button(modifier = Modifier.fillMaxWidth(1f)
                 .padding(all = 25.dp),
-                onClick = OnSubmitBtnClick())
+                onClick = OnSubmitBtnClick )
+            {
+                Text(text = stringResource(id = R.string.submit))
+            }
 
         }
     }
