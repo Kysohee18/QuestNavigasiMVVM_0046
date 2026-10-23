@@ -2,8 +2,12 @@ package com.example.activity5.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -15,6 +19,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.activity5.R
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -40,7 +45,15 @@ fun TampilData(
                 verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_small)))
             {
                 items.forEach { item ->
-                    Column {}
+                    Column {
+                        Text(text = item.first.uppercase(), fontSize = 16.sp)
+                        Text(text = item.second, fontWeight = = Fontweight.Bold, fontSize = 16.sp)
+                    }
+                    HorizontalDivider(thickness = 1.dp, color = Color.Black)
+                }
+                Spacer(modifier = Modifier.height(10.dp))
+                Button(onClick = onBackBtnClick) {
+                    Text(text = stringResource(id = R.string.back))
                 }
             }
         }
